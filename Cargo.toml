@@ -2,7 +2,7 @@
 name = "femtoclaw-bench"
 version = "1.0.0"
 edition = "2021"
-license = "MIT"
+license = "Apache-2.0"
 description = "FemtoClaw Benchmark Suite — industrial runtime performance, latency, throughput, and memory benchmarks."
 repository = "https://github.com/femtoclaw/femtoclaw-bench.git"
 
