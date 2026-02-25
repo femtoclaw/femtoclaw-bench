@@ -1,0 +1,20 @@
+{
+  "candidates": [
+    {
+      "name": "femtoclaw",
+      "bin": "./target/release/femtoclaw",
+      "args": [
+        "once",
+        "ping"
+      ]
+    },
+    {
+      "name": "other_runtime",
+      "bin": "/path/to/runtime",
+      "args": [
+        "--version"
+      ]
+    }
+  ],
+  "iterations": 50
+}

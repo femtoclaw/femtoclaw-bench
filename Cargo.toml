@@ -1,0 +1,36 @@
+[package]
+name = "femtoclaw-bench"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+description = "FemtoClaw Benchmark Suite — industrial runtime performance, latency, throughput, and memory benchmarks."
+repository = "https://github.com/femtoclaw/femtoclaw-bench.git"
+
+[features]
+default = ["criterion"]
+criterion = []
+# Enables process-spawn startup measurements (requires std::process).
+startup = []
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }
+
+# criterion = { version = "0.5", optional = true }
+
+# [dev-dependencies]
+# criterion = "0.5"
+
+[[bench]]
+name = "micro"
+harness = false
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+opt-level = "z"
