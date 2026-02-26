@@ -1,6 +1,6 @@
 [package]
 name = "femtoclaw-bench"
-version = "1.0.2"
+version = "1.0.3"
 edition = "2021"
 license = "Apache-2.0"
 description = "FemtoClaw Benchmark Suite — industrial runtime performance, latency, throughput, and memory benchmarks."
