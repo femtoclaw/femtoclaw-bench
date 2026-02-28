@@ -8,7 +8,7 @@ It focuses on **measurable, repeatable** performance characteristics:
 - Tool dispatch latency (capability lookup + arg validation)
 - Memory operations (push/history/eviction)
 - End-to-end step latency (simulated)
-- Resource footprint guidelines (RSS sampling script)
+- Memory usage overhead (RSS before/after/delta)
 
 ## Quickstart
 
@@ -38,7 +38,7 @@ cargo run --release -- startup --bin ./target/release/femtoclaw --iterations 50
 
 ## Output
 
-- Console summary (always)
+- Console summary (always, including per-metric units)
 - JSON report (optional with `--json`)
 
 ## Notes

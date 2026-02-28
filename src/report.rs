@@ -1,5 +1,4 @@
-use crate::util;
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Metric {
@@ -20,7 +19,10 @@ pub struct SuiteResult {
 pub fn print(res: &SuiteResult) {
     println!("== {} ==", res.suite);
     for m in &res.metrics {
-        println!("- {:32} {:10.2} ns/op  (iters: {})", m.name, m.ns_per_op, m.iters);
+        println!(
+            "- {:32} {:12.2} {}  (iters: {})",
+            m.name, m.ns_per_op, m.unit, m.iters
+        );
     }
     for n in &res.notes {
         println!("  note: {}", n);
